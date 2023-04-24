@@ -1,0 +1,49 @@
+.box {
+    width: 150px;
+    height: 50px;
+    border: 1px solid tomato;
+    margin: 5px;
+    background-color: gold;
+}
+
+.display {
+    display: none;
+    /* 공간차지 X 
+    스크린 리더기가 내용을 무시한다.*/
+}
+
+.visible {
+    visibility: hidden;
+    /* 공간은 차지하나 사라진다 */
+}
+
+.opacity {
+    opacity: 0;
+}
+
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.text {
+    text-indent: -999em;
+}
+
+.pos {
+    position: absolute;
+    left: -999em;
+}
+
+.width {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0px 0px 0);
+    overflow: hidden;
+    background-image: url("../../html/imgs/panda.jpg");
+}
+.font{font-size:0;}
