@@ -1,0 +1,80 @@
+html {
+    font-size: 20px
+}
+.root{
+    font-size: 30px;
+}
+.em {
+    font-size: 1em;
+}
+
+.per {
+    font-size: 100%;
+}
+
+.vw {
+    font-size: 1vw;
+}
+
+.px {
+    font-size: 16px;
+}
+
+.rem {
+    font-size: 1rem;
+}
+
+.ex {
+    font-size: 1ex;
+}
+
+.pc {
+    font-size: 1pc;
+}
+
+.pt {
+    font-size: 1pt;
+}
+
+html {
+    border: 3px solid tomato;
+    background-color: beige;
+}
+
+body {
+    border: 3px solid skyblue;
+    background-color: azure;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.vw {
+    /* height: 100%; */
+    background: plum;
+    width: 100vw;
+    /* 스크롤바 포함해서 100% */
+}
+
+.hex {
+    background-color: #ff0;
+}
+
+.rgb {
+    background-color: rgb(255, 0, 0);
+}
+
+.rgba {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.hsl {
+    background-color: hsl(360, 100%, 50%);
+}
+
+.hsla {
+    background-color: hsla(30, 100%, 50%, 0.5);
+}
