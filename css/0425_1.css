@@ -1,0 +1,46 @@
+.borderimg {
+    border: 10px solid transparent;
+    padding: 10px;
+    border-image: url(../imgs/보더.png) 30 round;
+    margin: 30px;
+}
+
+.borderimg:hover {
+    border-image: url(../imgs/보더.png) 30 repeat;
+}
+
+.borderimg:active {
+    border-image: url(../imgs/보더.png) 30 stretch;
+}
+
+.borderimg2 {
+    border: 20px solid red;
+    padding: 10px;
+    border-image: url(../imgs/보더2.png) 11 round;
+}
+
+.borderimg3 {
+    height: 50px;
+    width: 400px;
+    border: 40px solid transparent;
+    padding: 10px;
+    margin: 30px;
+    border-image: url("../../html/imgs/panda.jpg") 4 round;
+}
+
+ul {
+    margin: 30px;
+}
+
+ul>li {
+    list-style-type: decimal;
+    list-style-position: outside;
+    list-style-position: inside;
+    list-style-image: url("../../html/imgs/icon1.gif");
+    /* list-style: none;
+    list-style: upper-alpha inside; */
+}
+
+ul>li:hover {
+    list-style-image: url("../../html/imgs/icon2.gif");
+}

@@ -1,5 +1,33 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-a{text-edecoraion : none;  }
+
+a {
+    text-edecoraion: nones;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+a:link {
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    color: gray;
+}
+
+a:visited {
+    color: green;
+}
