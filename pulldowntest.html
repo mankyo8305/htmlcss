@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/pulldowntest.css"> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        a:link {
+            color: black;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        a:active {
+            color: gray;
+        }
+
+        ul>li>a {
+            display: block;
+            padding: 15px 40px;
+            position: relative;
+        }
+
+        ul {
+
+            clear: both;
+            margin: auto;
+            max-width: 570px;
+            min-width: 570px;
+        }
+
+        ul::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        ul>li {
+            float: left;
+            position: relative;
+            text-align: center;
+            background-color: coral;
+        }
+
+        ul>li>a::after {
+            content: "";
+            background-color: brown;
+            display: block;
+            height: 10px;
+            width: 0%;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transition: 0.4s;
+        }
+
+        ul>li>a:hover::after {
+            width: 100%;
+            left: 0%;
+        }
+
+        ul>li:hover>ol {
+            display: block;
+        }
+
+        ol>li>a {
+            display: block;
+            padding: 10px 0;
+        }
+
+        ol {
+            position: absolute;
+        }
+
+        ol>li {
+            background-color: bisque;
+        }
+
+        ul>li>ol {
+            display: none;
+            width: 100%;
+        }
+
+        ul>li>ol>li:hover {
+            background-color: lightpink;
+            transition: 1s;
+        }
+
+        ul>li>ol>li>a::before {
+            content: "";
+            position: absolute;
+            display: block;
+            clear: both;
+            height: 100%;
+            background-color: brown;
+            width: 0px;
+            top: 0%;
+            left: 0%;
+
+        }
+
+        ul>li>ol>li>a:hover::before {
+            width: 10px;
+            transition: 0.3s;
+        }
+
+        ul>li>ol>li {
+            position: relative;
+
+        }
+
+        /* a:visited {
+    color: green;
+} */
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">뎁쓰</a>
+                <ol>
+                    <li><a href="#">메뉴</a></li>
+                    <li><a href="#">메뉴</a></li>
+                    <li><a href="#">메뉴</a></li>
+                    <li><a href="#">메뉴</a></li>
+                    <li><a href="#">메뉴</a></li>
+                </ol>
+            </li>
+            <li><a href="#">뎁쓰</a>
+                <ol>
+                    <li><a href="#">메뉴</a></li>
+                    <li><a href="#">메뉴</a></li>
+                    <li><a href="#">메뉴</a></li>
+                    <li><a href="#">메뉴</a></li>
+                    <li><a href="#">메뉴</a></li>
+                </ol>
+            </li>
+            <li><a href="#">뎁쓰</a>
+                <ol>
+                    <li><a href="#">메뉴</a></li>
+                    <li><a href="#">메뉴</a></li>
+                    <li><a href="#">메뉴</a></li>
+                    <li><a href="#">메뉴</a></li>
+                    <li><a href="#">메뉴</a></li>
+                </ol>
+            </li>
+            <li><a href="#">뎁쓰</a>
+                <ol>
+                    <li><a href="#">메뉴</a></li>
+                    <li><a href="#">메뉴</a></li>
+                    <li><a href="#">메뉴</a></li>
+                    <li><a href="#">메뉴</a></li>
+                    <li><a href="#">메뉴</a></li>
+                </ol>
+            </li>
+            <li><a href="#">뎁쓰</a>
+                <ol>
+                    <li><a href="#">메뉴</a></li>
+                    <li><a href="#">메뉴</a></li>
+                    <li><a href="#">메뉴</a></li>
+                    <li><a href="#">메뉴</a></li>
+                    <li><a href="#">메뉴</a></li>
+                </ol>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>

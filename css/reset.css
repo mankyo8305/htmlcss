@@ -4,7 +4,7 @@
 }
 
 a {
-    text-edecoraion: nones;
+    text-decoration: none;
     color: black;
 }
 
@@ -28,6 +28,6 @@ a:active {
     color: gray;
 }
 
-a:visited {
+/* a:visited {
     color: green;
-}
+} */

@@ -1,0 +1,114 @@
+ul a {
+    display: block;
+    padding: 10px;
+}
+
+ul {
+    width: 600px;
+    margin: auto;
+    border: 1px solid;
+}
+
+ul>li {
+    float: left;
+}
+
+/* ul {
+    overflow: hidden;
+} */
+
+ol {
+    /* display: none; */
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+
+}
+
+ul>li:hover {
+    background: orange;
+
+}
+
+ul>li:hover>ol {
+    /* display: block; */
+    visibility: visible;
+    opacity: 1;
+    transition: 1s;
+
+}
+
+ol>li {
+    background: tomato;
+    height: 0;
+}
+
+ul>li {
+    position: relative;
+    
+}
+ul>li:hover>ol>li{
+    height: 45px;
+    transition: 1s;
+}
+
+ul {
+    height: 100px;
+}
+
+ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+ol {
+    width: 100%;
+}
+
+ol>li:hover {
+    background-color: lightgray;
+}
+
+ol>li>a::before {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 100%;
+    background: blue;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+ol>li>a {
+    position: relative;
+}
+
+ol>li>a:hover::before {
+    width: 5px;
+    transition: 0.2s;
+}
+
+/* 메인메뉴에 hover효과 주기 */
+ul>li>a{
+    position: relative;
+    
+}
+ul>li>a::after{
+    content: "";
+    display: block;
+    width: 0;
+    position: absolute;
+    left: 100%;
+    bottom:0;
+    height: 5px;
+    background: blue;
+
+}
+ul>li>a:hover::after{
+    width: 100%;
+    transition: 0.5s;
+    display: block;
+    left: 0%;
+}
