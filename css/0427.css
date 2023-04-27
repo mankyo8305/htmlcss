@@ -1,0 +1,118 @@
+h1 {
+    color: rgba(0, 194, 0, 0.753);
+}
+
+label {
+    display: block;
+    margin: 20px;
+    border: 1px solid blue;
+    width: 30px;
+    text-align: center;
+    font-size: 30px
+}
+
+label>span {
+    display: block;
+    height: 3px;
+    background-color: blue;
+    border-radius: 2px;
+    margin: 3px auto;
+    width: 90%;
+}
+
+ul {
+    display: none;
+    position: relative;
+    width: 200px;
+}
+
+input:checked+ul {
+    display: block;
+}
+
+ul>li>a::before {
+    content: "\1F609";
+}
+
+ul>li {
+    background-color: rgba(0, 214, 0, 0.753);
+    border-bottom: 1px dashed white;
+    padding: 5px;
+    font-weight: bold;
+    text-indent: 20px;
+}
+
+ul>li:not(:last-child) {
+    box-shadow: 2px 2px 1px 0px white;
+}
+
+ul>li>a {
+    color: white !important;
+    display: block;
+    text-shadow: 1px 1px rgba(128, 128, 128, 0.171);
+
+}
+
+div.sub {
+    text-align: left;
+    width: 500px;
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    height: 100%;
+}
+
+ul>li:hover {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(128, 128, 128, 0.089);
+}
+
+ul>li:hover>a {
+    color: rgba(0, 214, 0, 0.753) !important;
+    text-shadow: 1px 1px rgba(128, 128, 128, 0.171);
+}
+
+ul>li:hover>a::before {
+    content: "\1F643";
+}
+
+ul>li:hover>a {
+    -webkit-text-stroke: 1px 1px black;
+}
+
+ul>li:hover>div.sub {
+    display: flex;
+
+}
+
+div.sub section {
+    flex: 1;
+}
+
+section>ol {
+    font-size: 0.9em;
+    font-weight: normal;
+    color: gray;
+}
+
+section>h3 {
+    font-size: 1em;
+    font-weight: normal;
+    margin-bottom: 10px;
+    text-align: left;
+
+}
+
+section {
+    padding-top: 20px;
+    border-right: 1px solid rgba(128, 128, 128, 0.26);
+
+}
+
+section>ol>li {
+    height: 100%;
+    line-height: 30px;
+
+}
+
