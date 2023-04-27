@@ -1,0 +1,44 @@
+ul ol {
+    display: block;
+}
+
+ul {
+    width: 200px;
+    margin: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.192);
+
+}
+ul>li{
+    position: relative;
+}
+
+ul>li>a {
+    display: block;
+    background-color: rgba(79, 192, 4, 0.979);
+    color: white !important;
+    font-size: 1em;
+    padding: 10px;
+
+}
+
+ul>li:nth-child(n):not(:last-child) {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.418);
+}
+
+ul>li>a:hover {
+    background-color: white;
+    color: rgba(79, 192, 4, 0.979) !important;
+}
+
+span {
+    font-weight: bold;
+}
+div{
+    
+    border: 3px solid;
+}
+
+
+ul>li>div>ol{
+
+}

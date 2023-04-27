@@ -1,0 +1,73 @@
+.box {
+    width: 100px;
+    height: 100px;
+    position: relative;
+
+}
+
+.box:nth-of-type(1) {
+    background-color: blue;
+    z-index: 3;
+
+}
+
+.box:nth-of-type(2) {
+    background-color: yellow;
+    left: 50px;
+    bottom: 50px;
+    z-index: 2;
+}
+
+.box:nth-of-type(3) {
+    background-color: thistle;
+    bottom: 100px;
+    left: 100px;
+}
+
+.wrap {
+    border: 1px solid tomato;
+    width: 500px;
+    height: 100px;
+    overflow: scroll
+}
+
+.shadow {
+    text-align: center;
+    line-height: 100px;
+    width: 400px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 20px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 20px 0 black;
+    text-shadow: 2px 0px 5px orange,
+        -2px 0px 5px orange,
+        0px 2px 5px orange,
+        0px -2px 5px orange;
+
+    font-weight: bold;
+    font-size: 2em;
+    /* background: linear-gradient( to left, blue, pink);     */
+}
+
+.shadow:hover {
+    box-shadow: inset 10px 10px 20px 0px black;
+
+}
+
+.shadow:active {
+    box-shadow:
+        -10px -10px 20px 0px gold,
+        10px 10px 20px 0px pink;
+    background-color: black;
+    color: white;
+}
+
+.sample {
+    height: 300px;
+    width: 300px;
+    border-style: solid;
+    border-width: 59px 60px 59px 59px;
+    border-image: url("../../html/imgs/tiger.jpg") 32 46 26 46 stretch stretch;
+}

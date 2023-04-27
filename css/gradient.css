@@ -1,0 +1,76 @@
+.wrap div {
+    border: 5px groove;
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+}
+
+.wrap {
+    border: 5px double;
+    width: fit-content;
+    height: fit-content;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grad1 {
+    background: linear-gradient(to right bottom, tomato, white);
+}
+
+.grad1:hover {
+    background: linear-gradient(to left top, tomato, white);
+}
+
+.grad2 {
+    background: linear-gradient(45deg, skyblue, white);
+}
+
+.grad2:hover {
+    background: linear-gradient(-45deg, skyblue, white);
+}
+
+/* 중지점주기 */
+.grad3 {
+    background: linear-gradient(to bottom, gold, white 90%);
+}
+
+.grad3:hover {
+    background: linear-gradient(to bottom, gold, white 50%);
+}
+
+.grad4 {
+    background: radial-gradient(white, yellow, blue);
+}
+
+.grad4:hover {
+    background: radial-gradient(circle, white, yellow, red);
+}
+
+.grad5 {
+    background: radial-gradient(circle at 10% 10%, gold, white);
+}
+
+.grad5:hover {
+    background: radial-gradient(circle at 90% 90%, gold, white);
+}
+
+.grad6 {
+    background: radial-gradient(at 30% 40%, white, gold, green);
+}
+
+.grad7{
+    background: radial-gradient(farthest-corner at 50% 60%, white, gold, green);
+}
+.grad8{
+    background: radial-gradient(closest-side at 30% 20%,yellow, red, brown);
+}
+h1{
+    text-align: center;
+    background: linear-gradient(red , blue);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    border: 20px solid ;
+    border-image: linear-gradient(gold , silver , red ) 30 stretch;
+    -webkit-text-stroke: 1px skyblue;
+}
