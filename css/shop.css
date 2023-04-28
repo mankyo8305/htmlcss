@@ -1,0 +1,213 @@
+h1 {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+h3 {
+    color: rgba(0, 0, 0, 0.377);
+}
+
+div.nav {
+    position: relative;
+    /* border-top: 1px solid;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.548);
+    bottom: 25px; */
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-between;
+    /* 양쪽정렬 */
+    align-items: center;
+    /* 세로 중앙 정렬 */
+    padding: 10px;
+    height: 50px;
+}
+
+div.nav>h2 {
+    text-align: center;
+    flex: 1;
+    font-size: 1.5em;
+}
+
+div.left {
+    top: 5px;
+    position: absolute;
+    left: 0;
+    display: block;
+    text-align: left;
+    margin: 10px;
+    width: fit-content;
+    height: fit-content;
+    font-size: 30px;
+    padding: auto;
+}
+
+.nav i {
+    font-size: 1.5em;
+}
+
+div.right {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    display: block;
+    margin: 5px;
+    width: fit-content;
+    height: fit-content;
+    font-size: 30px;
+    flex: 1;
+}
+
+div.bottom {
+    position: relative;
+}
+
+.bottom i {
+    position: absolute;
+    left: 5px;
+    top: 3px;
+}
+
+body>div:nth-child(3) {
+    border-top: 2px solid lightgray;
+    position: relative;
+    text-align: center;
+    padding: 10px;
+
+}
+
+div>h3 {
+    align-items: center;
+    text-align: center;
+    font-size: 1em;
+}
+
+/*  */
+
+div.box {
+    width: 400px;
+    background-color: aliceblue;
+    height: 200px;
+    position: relative;
+    /* 공식 */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+}
+
+.box p {
+    width: 60%;
+    background-color: tomato;
+    height: 40%;
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+    line-height: calc(200px*0.4);
+
+}
+
+.center {
+    margin: auto;
+}
+
+.tac {
+    text-align: center;
+}
+
+html,
+body {
+    width: 100%;
+    top: 100%;
+}
+
+.body {
+    position: relative;
+}
+
+.box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.buy {
+    display: flex;
+}
+
+div.buy>span {
+    padding: 20px;
+    flex: 1;
+    font-size: 1.5em;
+    font-weight: bold;
+    height: 100%;
+}
+
+span.cbuy {
+    border-bottom: 1px solid black;
+}
+
+span.lbuy {
+    border-bottom: 1px solid black;
+}
+
+span.cbuy:hover {
+    border-bottom: 3px solid palevioletred;
+}
+
+span.lbuy:hover {
+    border-bottom: 3px solid palevioletred;
+}
+
+div.middle {
+    border: 1px solid gray;
+    margin: 30px;
+    border-spacing: 20px;
+}
+
+div.madein {
+    text-align: left;
+    background: rgba(128, 128, 128, 0.26);
+    border-bottom: 1px solid gray;
+    padding: 10px;
+    font-size: 0.7em;
+}
+
+article {
+    padding: 10px;
+}
+
+.goods {
+    position: relative;
+}
+
+.goods .img {
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid;
+    
+}
+.goods .goodss{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    line-height: 1.5;
+}
+.icon-price{
+    margin: 10px 0;
+    border-bottom:1px solid gray;
+    border-top:1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+}
+.icon-price .icon{
+    width: auto;
+    height: auto;
+    font-size: 1.5em;
+}

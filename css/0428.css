@@ -1,0 +1,73 @@
+/* 모바일 */
+@media screen and (max-width:480px) {
+    .wrap {
+        /* background-color: palegreen; */
+    }
+
+    nav ul li {
+        width: auto;
+        text-align: center;
+        border: 10px solid gray;
+    }
+
+}
+
+/* 태블릿 */
+@media screen and (min-width:768px) and (max-width:959px) {
+    .wrap {
+        background-color: none;
+    }
+
+    nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    nav ul li {
+        /* display: inline-block; */
+        width: 31%;
+        text-align: center;
+        border: 1px solid black;
+        margin: 5px;
+        flex: 1;
+       
+    }
+    nav ul li:nth-child(4){width: 48%;}
+    nav ul li:nth-child(5){width: 48%;}
+}
+
+/* pc */
+@media screen and (min-width:960px) {
+    .wrap {
+        /* background-color: pink; */
+        border: 1px solid black;
+        max-width: 1280px;
+        margin: auto;
+    }
+
+    nav ul li {
+        float: left;
+        width: 20%;
+        text-align: center;
+
+    }
+
+    nav ul {
+        overflow: hidden;
+    }
+}
+
+/* 세웠을때 */
+ /* @media screen and (orientation:portrait) {
+    h1 {
+        font-size: 35px;
+        color: burlywood;
+    }
+} */
+/* 눕혔을때 */
+/* @media screen and (orientation:landscape) {
+    h1 {
+        font-size: 35px;
+        color: cadetblue;
+    }
+} */

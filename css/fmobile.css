@@ -1,0 +1,45 @@
+.wrap {
+    border: 3px groove black;
+}
+
+header,
+section,
+footer,
+div {
+    border: 1px solid black;
+    margin: 5px;
+}
+
+section div {
+    height: 200px;
+}
+
+@media (min-width:768px) and (max-width:1279px){
+    section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    section>div {
+        flex: 1 1 40%
+    }
+}
+
+@media (min-width:1280px) {
+    section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .wrap section>div{
+        /* flex: 1 1 32%; */
+        width: 32%;
+    
+    }
+    section div:nth-child(5){
+        /* flex: 1 1 50%; */
+        right: 0;
+        margin-left: 10px;
+        flex: 2 3 0;
+    }
+}
