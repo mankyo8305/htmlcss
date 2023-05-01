@@ -1,0 +1,130 @@
+/* 연습 */
+/* [id*=box] {
+    width: 100px;
+    height: 100px;
+    background: orange;
+    border: 1px solid;
+}
+
+#box1 {
+    animation: box1_ani 3s 0.5s alternate infinite;
+    margin: 30px;
+    position: relative;
+}
+
+#box2 {
+    animation: box2_ani 3s 0.5s alternate infinite;
+    margin: 30px;
+    position: relative;
+} */
+
+
+/* @keyframes box1_ani {
+    0% {
+        left: 0;
+        background: orange;
+    }
+
+    50% {
+        left: 0;
+        top: 100px;
+        background: blue;
+        transform: rotate(180deg);
+    }
+
+    100% {
+        left: 200px;
+        top: 100px;
+        background: orange;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes box2_ani {
+    0% {
+        left: 0;
+        background: hotpink;
+    }
+
+    50% {
+        top: 100px;
+        background: greenyellow;
+        transform: rotate(180deg);
+    }
+
+    100% {
+        left: 0;
+        background: palegreen;
+        transform: rotate(360deg);
+        top: 100px;
+    }
+} */
+
+
+
+@keyframes slider {
+    from {
+        left: 0;
+    }
+
+    20% {
+        left: -500px;
+    }
+
+    40% {
+        left: -1000px;
+    }
+
+    60% {
+        left: -1500px;
+    }
+
+    to {
+        left: -2000px;
+    }
+}
+
+.canvas {
+    width: 500px;
+    height: 400px;
+    border: 2px solid black;
+    display: flex;
+    overflow: hidden;
+}
+
+.panel {
+    animation: slider 10s infinite alternate;
+}
+
+
+.canvas:hover>.panel {
+    animation-play-state: paused;
+}
+
+@keyframes slider2 {
+    from {
+        top: 0;
+    }
+
+    20% {
+        top: -500px;
+    }
+
+    40% {
+        top: -1000px;
+    }
+
+    60% {
+        top: -1500px;
+    }
+
+    to {
+        top: -2000px;
+    }
+}
+
+#canvas>.panel {
+    animation: slider2 10s infinite alternate;
+    border: 5px solid red !important;
+    width: 500px;
+}

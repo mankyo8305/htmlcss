@@ -1,0 +1,145 @@
+h2 {
+    font-size: 1em;
+    line-height: 1.96;
+    -webkit-text-fill-color: gray;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: rgba(135, 207, 235, 0.5);
+}
+
+#contain {
+    /* border: 2px solid; */
+    width: 900px;
+}
+
+div.row {
+    align-items: center;
+    justify-content: left;
+    /* border: 1px solid; */
+    display: block;
+    display: flex;
+    margin: 10px;
+    width: auto;
+}
+
+div.box {
+    /* border: 1px solid; */
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    position: relative;
+
+}
+
+div>ul>li {
+    font-size: 0.9em;
+    line-height: 2;
+    letter-spacing: -1px;
+    color: gray;
+}
+
+div.box>ul {
+    margin-top: 10px;
+    position: absolute;
+    width: 100%;
+    top: 21px;
+}
+
+div.box>ul li::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: lightgray;
+}
+
+div.box>ul::before {
+    content: "";
+    display: block;
+    background-color: skyblue;
+    height: 3px;
+    width: 70%;
+}
+
+div.box>ul>li:first-child {
+    margin-top: 5px;
+}
+
+@media screen and (max-width:768px) {
+    /* h2 {
+        font-size: 1em;
+        line-height: 1.96;
+        -webkit-text-fill-color: gray;
+    }
+    
+    h2::after {
+        content: "";
+        display: block;
+        height: 3px;
+        background-color: rgba(135, 207, 235, 0.5);
+    }
+    
+    #contain {
+        border: 2px solid;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    div.row {
+        align-items: center;
+        border: 1px solid;
+        display: block;
+        margin: 10px;
+    }
+    
+    div.box {
+        border: 1px solid;
+        display: block;
+        height: 200px;
+        margin: 20px;
+        position: relative;
+    
+    }
+    
+    div>ul>li {
+        font-size: 0.9em;
+        line-height: 1.4;
+        letter-spacing: -1px;
+        color: gray;
+    }
+    
+    div.box>ul {
+        margin-top: 10px;
+        position: absolute;
+        width: 100%;
+        top: 21px;
+    }
+    
+    div.box>ul li::after {
+        content: "";
+        display: block;
+        height: 1px;
+        background-color: lightgray;
+    }
+    
+    div.box>ul::before {
+        content: "";
+        display: block;
+        background-color: skyblue;
+        height: 3px;
+        width: 70%;
+    }
+    
+    div.box>ul>li:first-child {
+        margin-top: 5px;
+    } */
+}
+
+@media (min-width:769px) and (max-width:1023px) {}
+
+@media screen and (min-width:1024px) {}

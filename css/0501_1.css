@@ -1,0 +1,74 @@
+section{
+    border: 1px solid black;
+}
+section>div{
+    width: 5px;
+    height: 20px;
+    background-color: red;
+}
+section:hover>div:nth-child(1){
+    width: 300px;
+    transition-duration: 1s;
+}
+section:hover>div:nth-child(2){
+    width: 400px;
+    transition-duration: 1s;
+    transition-delay: 0.5s;
+    background-color: blue;
+}
+section:hover>div:nth-child(3){
+    width: 450px;
+    transition-duration: 1s;
+    transition-delay: 1s;
+    background-color: orange;
+    transition-property: width, background-color;
+}
+section:hover>div:nth-child(4){
+    width: 500px;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(.52,.69,.52,.7);
+    background: gold url("../imgs/보더.png") no-repeat left top scroll;
+}
+section:hover>div:nth-child(5){
+    width: 600px;
+    background-color: tomato;
+    transition: all 4s 2s ease;
+}
+div>h1{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: blue;
+    animation-name: myani;
+    animation-duration: 1s;
+    position: relative;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+div:hover>h1{
+    /* width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: blue;
+    animation-name: myani;
+    animation-duration: 1s;
+    position: relative;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+    animation-play-state: paused;
+}
+
+/* 애니메이션 정의 */
+@keyframes myani {
+    from{
+        left: 0;
+        background-color: red;
+    }
+    50%{
+        transform: rotate(360deg);
+    }
+    to{
+        left: 400px;
+        background-color: blueviolet;
+    }
+}
