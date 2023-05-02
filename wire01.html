@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/wire01.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="inner">
+            <h1>로고</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">menu</a>
+                        <div class="sub">
+                            <ol>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                            </ol>
+                            <ol>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                            </ol>
+                            <ol>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                            </ol>
+                            <ol>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li><a href="#">menu</a>
+                        <div class="sub">
+                            <ol>
+                                <li>submenu2</li>
+                                <li>submenu2</li>
+                                <li>submenu2</li>
+                                <li>submenu2</li>
+                            </ol>
+                            <ol>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                            </ol>
+                            <ol>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                            </ol>
+                            <ol>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li><a href="#">menu</a>
+                        <div class="sub">
+                            <ol>
+                                <li>submenu3</li>
+                                <li>submenu3</li>
+                                <li>submenu3</li>
+                                <li>submenu3</li>
+                            </ol>
+                            <ol>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                            </ol>
+                            <ol>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                            </ol>
+                            <ol>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li><a href="#">menu</a>
+                        <div class="sub">
+                            <ol>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                            </ol>
+                            <ol>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                            </ol>
+                            <ol>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                            </ol>
+                            <ol>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                                <li>submenu</li>
+                            </ol>
+                        </div>
+                    </li>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="content">
+        <!-- Slider main container -->
+        <div class="swiper">
+
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="./imgs/sight.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./imgs/sight2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./imgs/sight3.jpg" alt=""></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+            <script>
+                const swiper = new Swiper('.swiper', {
+                    // Optional parameters
+                    direction: 'horizontal',
+                    loop: true,
+
+                    // If we need pagination
+                    pagination: {
+                        el: '.swiper-pagination',
+                    },
+
+                    // Navigation arrows
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+
+                    // And if we need scrollbar
+                    scrollbar: {
+                        el: '.swiper-scrollbar',
+                    },
+                });
+            </script>
+        </div>
+        <div class="row">
+            <article>공지사항</article>
+            <article>배너</article>
+            <article>바로가기</article>
+        </div>
+    </div>
+    <footer>
+        <div class="inner">
+            <h1>로고</h1>
+            <div id="rowmenu">
+                <div>
+                    하단메뉴
+                </div>
+                <div id=>
+                    Copyright
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
