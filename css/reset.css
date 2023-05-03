@@ -14,6 +14,7 @@ li {
 
 table {
     border-collapse: collapse;
+    border-spacing: 0;
 }
 
 a:link {
@@ -26,6 +27,11 @@ a:hover {
 
 a:active {
     color: gray;
+}
+
+input,
+img {
+    vertical-align: baseline;
 }
 
 /* a:visited {

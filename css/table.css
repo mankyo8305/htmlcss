@@ -1,0 +1,61 @@
+.table1 td {
+    border: 1px solid;
+    padding: 10px;
+    text-align: center;
+}
+
+.table1 {
+    border-spacing: 0px;
+    caption-side: top;
+    margin: 10px;
+    border: 0px solid skyblue;
+}
+
+.table1 tr {
+    border: 1px solid lightcoral;
+}
+
+
+.table1 td {
+    border: 1px solid lemonchiffon;
+    empty-cells: show;
+}
+
+caption {
+    border: 0px solid tomato;
+}
+
+html,
+body {
+    width: 100%;
+
+}
+
+.table1 {
+    border-collapse: collapse;
+    border-spacing: 5px 10px;
+    width: 300px;
+    table-layout: fixed;
+    height: auto;
+    /* word-break: break-all; */
+}
+
+.table td {
+    width: 50px;
+    vertical-align: top;
+}
+
+input {
+    height: 30px;
+    outline: none;
+    vertical-align: baseline;
+}
+
+ul {
+    display: table;
+}
+
+ul li {
+    display: table-cell;
+    padding: 10px;
+}

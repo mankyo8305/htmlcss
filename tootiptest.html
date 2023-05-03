@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {}
+
+        .wrap h2 {
+            width: fit-content;
+            margin-left: 115px;
+        }
+
+        .tootip_wrap {
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.5s;
+            border: 0px solid black;
+            width: 300px;
+            height: 170px;
+            color: white;
+            background-color: rgb(32, 44, 49);
+            padding: 15px;
+            position: relative;
+            text-align: justify;
+            left: 0px;
+            top: 0;
+        }
+
+        .wrap :hover .tootip_wrap {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tootip_wrap p {
+            margin-top: 0px;
+        }
+
+        .tootip_wrap span {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            margin: 15px;
+            font-size: 12px;
+            text-decoration: underline;
+            color: gray;
+        }
+
+        .tootip_wrap span a:visited {
+            color: gray;
+        }
+
+        .tootip_wrap div button {
+            position: absolute;
+            right: 0;
+            background-color: rgb(250, 92, 34);
+            border: none;
+            width: 90px;
+            height: 30px;
+            color: white;
+            margin: 15px;
+            border-radius: 3px;
+            bottom: 0px;
+        }
+
+        .tootip_wrap div button:hover {
+            cursor: pointer;
+        }
+
+        .tootip_wrap::before {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border: 13px solid transparent;
+            border-top: 15px solid rgb(32, 44, 49);
+            top: -25px;
+            left: 150px;
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div>
+            <h2>나의일상</h2>
+            <div class="tootip_wrap">
+                <p>
+                    세아는 정직, 열정, 실력을 핵심 가치로 삼고
+                    올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히
+                    하고 풍요로운 삶에 기여합니다.
+                </p>
+                <span><a href="#">더 알아보기</a></span>
+                <div>
+                    <button>확인</button>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
