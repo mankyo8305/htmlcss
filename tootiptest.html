@@ -6,8 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./XEIcon-2.2.0/xeicon.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
     <style>
-        .wrap {}
+        .wrap {
+            border: 1px solid;
+            margin: 0;
+            width: fit-content;
+        }
 
         .wrap h2 {
             width: fit-content;
@@ -30,7 +36,7 @@
             top: 0;
         }
 
-        .wrap :hover .tootip_wrap {
+        .wrap:hover .tootip_wrap {
             visibility: visible;
             opacity: 1;
         }
@@ -82,13 +88,46 @@
             left: 150px;
             transform: rotate(180deg);
         }
+
+        nav ul li a {
+            border: 1px solid;
+            font-size: 2em;
+            background-color: rgb(32, 44, 49);
+            padding: 0px;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            cursor: pointer;
+        }
     </style>
 </head>
 
 <body>
+    <nav class="navi">
+        <ul>
+            <li><a href="#">
+                    <i class="xi-bars"></i>
+                </a></li>
+            <li><a href="#">
+                    <i class="xi-eye"></i>
+                </a></li>
+            <li><a href="#">
+                    <i class="xi-lock"></i>
+                </a></li>
+            <li><a href="#">
+                    <i class="xi-flag"></i>
+                </a></li>
+            <li><a href="#">
+                    <i class="xi-wrench"></i>
+                </a></li>
+            <li><a href="#">
+                    <i class="xi-cog"></i>
+                </a></li>
+        </ul>
+    </nav>
     <div class="wrap">
         <div>
-            <h2>나의일상</h2>
             <div class="tootip_wrap">
                 <p>
                     세아는 정직, 열정, 실력을 핵심 가치로 삼고
