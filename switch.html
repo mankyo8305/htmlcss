@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/switch.css">
+</head>
+
+<body>
+    <h1>모달창 만들기</h1>
+    <a href="#modal" class="btn">모달창보이기</a>
+    <hr>
+    <div id="modal">
+        <div class="modal-body">
+            <img src="./imgs/sky2.jpg" alt="">
+            <a href="#" class="btn">닫기</a>
+        </div>
+    </div>
+    <h2>모달팝업창이란?</h2>
+    <p>버튼이나 사진을 클릭했을때 튀어나는 화면
+        modal popup 모달팝업이라고 하며, 라이트박스라고도 한다
+        modal은 독점적인..다른 컨텐츠는 선택이 안되고, 팝업창이 화면 중앙에 위치하면, 일반적으로 배경색은 반투명 고정이 보통이다.
+    </p>
+    <h1>스위치 버튼 만들기</h1>
+    <div class="switch">
+        <input type="checkbox" id="sw1" class="input-on-off">
+        <label for="sw1" class="label-on-off">
+            <span class="marble"></span>
+            <span class="on">on</span>
+            <span class="off">off</span>
+        </label>
+    </div>
+
+    <h1>3단 스위치 만들기</h1>
+    <div class="switch2">
+        <input type="radio" name="switch" id="one" checked>
+        <label for="one" class="switch_label">One</label>
+        <input type="radio" name="switch" id="two" checked>
+        <label for="two" class="switch_label">Two</label>
+        <input type="radio" name="switch" id="three" checked>
+        <label for="three" class="switch_label">Three</label>
+        <div class="switch_indicator"></div>
+    </div>
+
+    <div class="progressbar">
+        <input type="radio" id="bar_5" name="pgb" checked>
+        <label for="bar_5" class="bar_label">5%</label>
+        <input type="radio" id="bar_25" name="pgb">
+        <label for="bar_25" class="bar_label">25%</label>
+        <input type="radio" id="bar_50" name="pgb">
+        <label for="bar_50" class="bar_label">50%</label>
+        <input type="radio" id="bar_75" name="pgb">
+        <label for="bar_75" class="bar_label">75%</label>
+        <input type="radio" id="bar_100" name="pgb">
+        <label for="bar_100" class="bar_label">100%</label>
+        <div class="switch_indicator2"></div>
+        <div class="bar">
+            <div></div>
+        </div>
+    </div>
+    <h2>이미지 좌우 및 수직 반전 시키자.</h2>
+    <img src="./imgs/just.png" alt="">
+    <style>
+        img {
+            border: 1px solid;
+            width: 300px;
+            height: 300px;
+            transition: 1s;
+
+        }
+
+        img:hover {
+            transform: rotate(0deg);
+            transform: scaleX(-1);
+            filter: FlipH();
+            transition: 1s;
+
+        }
+
+        img:active {
+            transform: rotate(0deg);
+            transform: scaleY(-1);
+            filter: FlipV();
+        }
+    </style>
+</body>
+
+</html>
