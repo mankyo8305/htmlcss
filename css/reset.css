@@ -34,6 +34,30 @@ img {
     vertical-align: baseline;
 }
 
+address {
+    font-style: normal;
+}
+
+textarea {
+    resize: none;
+}
+
+img,
+fieldset {
+    border: 0;
+}
+
+em,
+i,
+address {
+    font-style: normal;
+}
+
+label {
+    cursor: pointer;
+}
+
+
 /* a:visited {
     color: green;
 } */
