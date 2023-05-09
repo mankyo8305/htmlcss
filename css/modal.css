@@ -1,0 +1,90 @@
+#modal {
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.modal-body {
+    width: 350px;
+    height: 350px;
+    border: 3px solid steelblue;
+    box-shadow: 3px 3px 5px black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn {
+    display: block;
+    background: rgb(243, 55, 55);
+    color: white;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#modal {
+    display: none;
+}
+
+#modal:target {
+    display: block;
+}
+
+.container {
+    background: rgb(255, 255, 255);
+    border: 1px solid gray;
+    box-shadow: 1px 1px 3px;
+    width: 300px;
+    height: 500px;
+    margin: 100px auto;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+
+}
+
+.container h1 {
+    line-height: 2;
+    font-size: 1.5em;
+}
+
+.container h2 {
+    font-size: 1em;
+    width: 150px;
+    margin: auto;
+    margin: 20px auto;
+    line-height: 1.5;
+}
+
+.container form {
+    flex-direction: column;
+    display: flex;
+}
+
+input {
+    padding: 15px;
+}
+
+
+input:focus {
+    outline: none;
+}
+
+.log {
+    margin: 20px 5px;
+    text-align: left;
+}
+
+input[type=submit] {
+    background: rgb(243, 55, 55);
+    color: white;
+    margin-bottom: 20px;
+    cursor: pointer;
+}

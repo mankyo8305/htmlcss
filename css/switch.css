@@ -1,0 +1,229 @@
+.switch {
+    margin: 50px;
+}
+
+.input-on-off {
+    display: none;
+}
+
+.label-on-off {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    border-radius: 15px;
+    display: block;
+    background: tomato;
+    color: white;
+    transition: 1s;
+    font-weight: bold;
+    line-height: 28px;
+    text-indent: 4px;
+}
+
+.marble {
+    position: absolute;
+    left: 2px;
+    top: 3px;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px gray;
+    transition: 0.5s;
+}
+
+.input-on-off:checked+.label-on-off>.marble {
+    left: 33px;
+}
+
+.switch span {
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.input-on-off:checked+.label-on-off {
+    background: limegreen;
+}
+
+.input-on-off:checked+.label-on-off>.off {
+    display: none;
+}
+
+.switch {
+    overflow: hidden;
+}
+
+.input-on-off+.label-on-off>.on {
+    visibility: hidden;
+}
+
+.input-on-off:checked+.label-on-off>.on {
+    visibility: visible;
+}
+
+/* 스위치 3개 */
+
+.switch2 {
+    position: relative;
+    padding: 0 16px;
+    font-family: Verdana;
+    margin: 30px;
+}
+
+.switch_label {
+    display: inline-block;
+    width: 32px;
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease-out;
+}
+
+.switch_indicator {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: -8px;
+    left: -10px;
+    background: steelblue;
+    transition: 0.6s;
+    transform: translate(16px, 0, 0);
+    border-radius: 50%;
+}
+
+#one:checked~.switch_indicator {
+    background: lightblue;
+    transform: translate(30px);
+}
+
+#two:checked~.switch_indicator {
+    background: lightcoral;
+    transform: translate(90px);
+}
+
+#three:checked~.switch_indicator {
+    background: lightgreen;
+    transform: translate(170px);
+}
+
+.switch2 input {
+    display: none;
+}
+
+.switch2 {
+    background: black;
+    border-radius: 30px;
+    color: white;
+    width: 220px;
+}
+
+.switch_label:hover {
+    color: lightgray;
+}
+
+/* 프로그레스바 */
+.progressbar {
+    margin: 30px;
+}
+
+.bar_label {
+    padding: 0 20px;
+
+}
+
+.progressbar input {
+    display: none;
+}
+
+.switch_indicator {}
+
+div.bar {
+    width: 500px;
+    height: 30px;
+    background: lightblue;
+    border-radius: 18px;
+    border: 8px solid steelblue;
+    outline: none;
+}
+
+
+div.bar>div {
+    /* border: 1px solid black; */
+    height: 99%;
+    background: lightcoral;
+    border-radius: 10px;
+    transition: 0.5s;
+    border: 0px solid lightcoral;
+}
+
+#bar_5:checked~.bar>div {
+
+    transform: scaleX(5%);
+    transform-origin: left;
+}
+
+#bar_25:checked~.bar>div {
+    transform: scaleX(25%);
+    transform-origin: left;
+}
+
+#bar_50:checked~.bar>div {
+    transform: scaleX(50%);
+    transform-origin: left;
+}
+
+#bar_75:checked~.bar>div {
+    transform: scaleX(75%);
+    transform-origin: left;
+}
+
+#bar_100:checked~.bar>div {
+    transform: scaleX(100%);
+    transform-origin: left;
+}
+
+/* 모달창 */
+#modal {
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.modal-body {
+    width: 350px;
+    height: 350px;
+    border: 3px solid steelblue;
+    box-shadow: 3px 3px 5px black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn {
+    display: block;
+    background: steelblue;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#modal img {
+    width: 100%;
+}
+
+#modal {
+    display: none;
+}
+
+#modal:target {
+    display: block;
+}

@@ -1,0 +1,130 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: url('../imgs/mountain.jpg') no-repeat left top / cover;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100px;
+    background: none;
+    border-bottom: 1px solid gray;
+    box-shadow: 0 1px 3px gray;
+    z-index: 1;
+}
+
+#wrap_head {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+header:hover {
+    background: white;
+    color: black;
+}
+
+header h1 {
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+nav>ul ol {
+    display: none;
+}
+
+nav {
+    position: absolute;
+    left: 300px;
+    top: 30px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul>li>a {
+    display: block;
+    padding: 10px;
+    font-weight: bold;
+    text-shadow: 1px 1px gray;
+}
+
+nav ul>li>a:visited {
+    color: white;
+}
+
+header:hover * {
+
+    color: black !important;
+    text-shadow: 0 1px lightgray;
+}
+
+nav {
+    font-size: 1.3em;
+    width: 600px;
+    left: 400px;
+}
+
+nav ul>li {
+    flex: 1;
+}
+
+ul ol {
+    position: absolute;
+    top: 101px;
+    left: 0;
+}
+
+ul>li:hover>ol {
+    display: flex;
+    background: white;
+    height: 50px;
+    width: 100%;
+}
+
+nav {
+    position: static;
+    margin-left: 400px;
+    margin-top: 30px;
+}
+
+ol a {
+    display: block;
+    padding: 10px;
+}
+
+ul>li:nth-child(1)>ol {
+    padding-left: 350px;
+}
+
+ul>li:nth-child(2)>ol {
+    padding-left: 450px;
+}
+
+ul>li:nth-child(3)>ol {
+    padding-left: 650px;
+}
+
+ul>li:nth-child(4)>ol {
+    padding-left: 800px;
+}
+
+nav li {
+    padding-bottom: 50px;
+}

@@ -1,0 +1,172 @@
+.wrap-box {
+    background-color: silver;
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+    box-shadow: 0 0 0 black;
+    position: relative;
+    transform: translateY() translateX();
+    transition: 1s;
+    margin: 50px;
+}
+
+.wrap-box:hover {
+    box-shadow: 20px 20px 0 black;
+    transform: translateY(-10px) translateX(-10px);
+}
+
+.wrap-box::before,
+.wrap-box::after {
+    content: "";
+    width: 100%;
+    height: 5px;
+    background-color: steelblue;
+    display: block;
+    transform: scaleX(0);
+    transition: 1s;
+    position: absolute;
+}
+
+.wrap-box::before {
+    left: 0;
+    top: 0;
+    transform-origin: 0 0;
+    z-index: 1;
+}
+
+.wrap-box::after {
+    right: 0;
+    bottom: 0;
+    transform-origin: 100% 0;
+    z-index: 3;
+}
+
+.wrap-box:hover::before {
+    transform: scaleX(1);
+}
+
+.wrap-box:hover::after {
+    transform: scaleX(1);
+}
+
+.box {
+    background-color: yellow;
+    width: 250px;
+    height: 250px;
+    box-shadow: 0 0 0 black;
+    margin: auto;
+}
+
+.box::before,
+.box::after {
+    content: "";
+    width: 5px;
+    height: 100%;
+    background-color: steelblue;
+    transform: scaleY(0);
+    transition: 1s 1s;
+    position: absolute;
+}
+
+.box::before {
+    left: 0;
+    top: 0;
+    transform-origin: 0 100%;
+    z-index: 2;
+}
+
+.box::after {
+    right: 0;
+    top: 0;
+    transform-origin: 0 0;
+    z-index: 4;
+}
+
+.box:hover::before,
+.box:hover::after {
+    transform: scaleY(1);
+}
+
+/* 인생은 회전목마 */
+div.item {
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+    background-color: limegreen;
+    position: absolute;
+
+}
+
+#viewport {
+    position: relative;
+    border: 10px solid brown;
+    height: 400px;
+    margin: 100px;
+    transform-style: preserve-3d;
+}
+
+#wheel {
+    position: absolute;
+    transform-style: preserve-3d;
+    left: 50%;
+    top: 20%;
+    border: 3px solid tomato;
+    height: 200px;
+    transform: translate(0%, -50%);
+}
+
+body {
+    perspective: ;
+}
+
+:root {
+    --widthA: 0px;
+}
+
+.item:nth-child(1) {
+    transform: rotateY(0) translateZ(-200px);
+    background: url("../imgs/범수신.jpg") no-repeat left top / cover;
+}
+
+.item:nth-child(2) {
+    transform: rotateY(180deg) translateZ(-200px);
+    background: url("../imgs/우크.jpg") no-repeat left top / cover;
+}
+
+.item:nth-child(3) {
+    transform: rotateY(120deg) translateZ(-200px);
+    background: url("../imgs/nf.jpg") no-repeat left top / cover;
+}
+
+.item:nth-child(4) {
+    transform: rotateY(60deg) translateZ(-200px);
+    background: url("../imgs/좋예.png") no-repeat left top / cover;
+}
+
+.item:nth-child(5) {
+    transform: rotateY(240deg) translateZ(-200px);
+    background: url("../imgs/보더.png") no-repeat left top / cover;
+}
+
+.item:nth-child(6) {
+    transform: rotateY(300deg) translateZ(-200px);
+    background: url("../imgs/roket.png") no-repeat left top / cover;
+}
+
+@keyframes myani {
+    from {
+        transform: rotateX(0) rotateY(0deg);
+    }
+
+    to {
+        transform: rotateX(0) rotateY(360deg);
+    }
+}
+
+#wheel {
+    animation: myani 10s infinite alternate;
+}
+
+.item {
+    left: -100px;
+}
