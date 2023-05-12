@@ -1,0 +1,161 @@
+/* 스타일 */
+/* 헤더디자인 */
+header {
+    background: black;
+}
+
+header a {
+    color: white;
+    display: block;
+    padding: 10px;
+}
+
+header li {
+    text-align: center;
+}
+
+header h1 img {
+    width: 200px;
+    height: 100px;
+    border-radius: 50px;
+    box-shadow: 3px 3px 3px gray;
+}
+
+/* 호버효과주기 */
+nav ul>li:hover {
+    background: gray;
+}
+
+nav ul>li:hover>a {
+    color: black;
+}
+
+ol>li:hover {
+    background: darkgray;
+}
+
+/* 이미지슬라이드 디자인 */
+.img_slide>.swiper {}
+
+/* 컨텐츠디자인 */
+.contents {
+    background: gray;
+}
+
+/* 테이블디자인 */
+.table {
+    width: 100%;
+}
+
+.table tr {
+    line-height: 2;
+}
+
+.table tr:nth-child(2n) {
+    background-color: lightgray;
+}
+
+/* 이미지슬라이드 화살표변경 */
+.swiper-button-next::after {
+    display: none;
+}
+
+.swiper-button-next {
+    background: url("../imgs/right_arrow2.png");
+    background-size: 100% 100%;
+    width: 50px !important;
+    opacity: 0.3;
+}
+
+.swiper-button-prev::after {
+    display: none;
+}
+
+.swiper-button-prev {
+    background: url("../imgs/right_arrow2.png");
+    background-size: 100% 100%;
+    transform: rotateY(180deg);
+    width: 50px !important;
+    opacity: 0.3;
+}
+
+.swiper-pagination-bullet {
+    background-color: rgba(135, 207, 235, 0.315) !important;
+    width: 25px !important;
+    height: 25px !important;
+}
+
+/* 모달창구현하기 */
+#modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #00000096;
+    z-index: 2;
+}
+
+/* #modal:target {
+    display: block;
+} */
+
+.modal_inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid black;
+    width: 500px;
+}
+
+.modal_inner img {
+    width: 500px;
+    height: 400px;
+}
+
+/* 버튼디자인 */
+button {
+    /* 버튼의기본모든스타일초기화 */
+    all: unset;
+    background-color: steelblue;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    display: block;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+/* 서비스 스타일 */
+.icons .info {
+    font-size: 1.2em;
+    color: blue;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 아이콘박스에 hover효과 주기 */
+.icons {
+    position: relative;
+}
+
+.icons:hover .text {
+    transition: 1s;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
+
+/* 푸터디자인 */
+
+.notice_go ul li a {
+    color: inherit;
+}
