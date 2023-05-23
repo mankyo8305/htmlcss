@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/0519-1.js"></script>
+</head>
+
+<body>
+    <script>
+        document.write('<hr>')
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(function (response) { return response.json() })
+            .then(data => {
+                var output = ''
+                output += "<table border='1'>"
+                output += '<tr>'
+                output += '<th>이름</th><th>전화번호</th><th>이메일</th>'
+                output += '</tr>'
+                for (var i in data) {
+                    output += '<tr>'
+                    output += "<td>" + data[i].name + '</td><td>' + data[i].phone + '</td><td>' + data[i].email + '</td>'
+                    output += '</tr>'
+                }
+                output += '</table>'
+                document.write(output)
+                console.log(data)
+            })
+    </script>
+</body>
+
+</html>

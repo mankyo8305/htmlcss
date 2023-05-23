@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/0516.js"></script>
+</head>
+
+<body>
+    <img src="./imgs/우크.jpg" id="img">
+    <h1 id="h1"> WHO AM I ?</h1>
+    <script>
+        var bwu = {
+            name: "Boy With Uke",
+            age: "30살",
+        }
+
+        var img = document.getElementById('img');
+        var h1 = document.getElementById('h1');
+
+        var i = 0;
+        img.onclick = function () {
+            if (i % 2 == 0) {
+                h1.innerHTML = bwu.name + "이고 " + bwu.age + "입니다";
+            } else {
+                h1.innerHTML = "WHO AM I ?";
+            }
+            i++
+        }
+
+        img[0].width = 200;
+        img[0].height = 150;
+
+        img[0].onmouseover = function () {
+            this.src = "imgs/범수신.jpg";
+        }
+
+
+    </script>
+</body>
+
+</html>

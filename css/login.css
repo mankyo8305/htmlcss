@@ -1,0 +1,134 @@
+/* .wrap {
+    width: 900px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    background-color: gainsboro;
+    position: relative;
+}
+
+.left ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: 10px;
+}
+
+.left ul a {
+    display: block;
+    padding: 10px;
+}
+
+.right {
+    position: absolute;
+    right: 0;
+}
+
+.right ol {
+    display: none;
+}
+
+#sub:target {
+    display: block;
+}
+
+header h1 {
+    color: #777;
+    font-size: 18px;
+    line-height: 20px;
+    height: 20px;
+    padding: 15px 15px;
+}
+
+.login_wrap {
+    background-color: #eee;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.4857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    margin: 10px auto;
+}
+
+.form-group {
+    margin: auto;
+    width: 100%;
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.4254564;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.btn-primary {
+    color: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    position: absolute;
+}
+
+#sub a {
+    display: block;
+    padding: 3px 20px;
+    line-height: 1.4289454;
+    counter-reset: #333;
+    white-space: nowrap;
+} */
+div.wrap {
+    width: 900px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    border: 1px solid;
+    position: relative;
+}
+
+header h1 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+nav.left,
+nav.right {}
+
+nav ul>li>a {
+    display: block;
+    padding: 10px;
+
+}
+
+nav ul {
+    display: flex;
+    height: 100%;
+}
+
+nav.right {
+    position: absolute;
+    right: 0;
+}
+
+div.login_wrap {}
+
+div.form_group {}
+
+div.form_group .btn {}
+
+div.form_group .btn_primary {}

@@ -1,0 +1,186 @@
+#wraper {
+    width: 900px;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    position: relative;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+header div.logo {
+    flex: 1;
+
+}
+
+header div.logo img {
+    width: 200px;
+}
+
+header nav {
+    position: absolute;
+    flex: 2;
+    top: 30px;
+    right: 20%;
+}
+
+header>nav>ul>li {
+    float: left;
+}
+
+header>nav>ul>li>a {
+    display: block;
+    padding: 10px 30px;
+    text-align: center;
+    -webkit-text-fill-color: rgb(59, 59, 59);
+}
+
+header>nav>ul>li {
+    position: relative;
+    height: 100px;
+}
+
+header>nav>ul>li>a:hover {
+    background: rgb(108, 108, 236);
+    -webkit-text-fill-color: white;
+}
+
+.submenu {
+    display: block;
+    visibility: hidden;
+    height: 0;
+}
+
+.submenu:hover li {
+    background: white;
+}
+
+header>nav>ul>li>a:hover+.submenu {
+    visibility: visible;
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    background: rgba(245, 244, 244, 0.445);
+    height: 100%;
+    transform: 1s;
+}
+
+/* 이미지슬라이더 */
+#imageslide {
+    border: 1px solid black;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+}
+
+#imageslide div.welcome {
+    text-align: center;
+}
+
+#contents {
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    -webkit-text-fill-color: rgb(99, 97, 97);
+}
+
+.notice,
+.partner,
+.icon {
+    margin: 10px;
+}
+
+
+div.notice {
+    text-align: center;
+}
+
+div.notice table {
+    margin: 10px;
+    text-align: justify;
+    font-size: 16px;
+    width: 400px;
+}
+
+div.notice table tr:nth-of-type(2) {
+    background: lightgray;
+}
+
+div.notice table tr:nth-of-type(4) {
+    background: lightgray;
+}
+
+div.notice table td {}
+
+div.partner {
+    text-align: center;
+}
+
+div.icon {
+    flex: 1;
+    display: flex;
+}
+
+div.icon .btn {
+    padding: 10px;
+    margin: auto;
+}
+
+div.icon .btn span {
+    display: block;
+    margin: auto;
+    background: gray;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-text-fill-color: white;
+}
+
+div.icon .btn span:hover {
+    cursor: pointer;
+    background: rgb(77, 77, 255);
+
+}
+
+div.icon .btn img {
+    width: 150px;
+
+}
+
+footer {
+    background: rgb(77, 77, 255);
+    height: 100px;
+    margin: 50px 0;
+    position: relative;
+    -webkit-text-fill-color: white;
+}
+
+footer ul {
+    height: 50px;
+    position: absolute;
+    left: 40px;
+    top: 10px;
+}
+
+footer ul li {
+    display: inline-block;
+}
+
+footer ul li a {
+    display: block;
+    -webkit-text-fill-color: white;
+    padding: 10px;
+}
+
+footer p {
+    right: 100px;
+    top: 10px;
+    position: absolute;
+    width: 300px;
+
+}

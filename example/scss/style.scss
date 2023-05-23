@@ -1,0 +1,364 @@
+//nasting 중첩
+// ex1
+nav {
+    background: pink;
+    padding: 10px;
+    height: 50px;
+
+    ul {
+        display: flex;
+        list-style: none;
+        justify-content: flex-end;
+
+        li {
+            color: white;
+            margin-right: 10px;
+        }
+    }
+}
+
+// ex2
+.background-img {
+    width: 100%;
+    height: auto;
+
+    background: {
+        image: url("../../imgs/mountain.jpg");
+        position: center center;
+        repeat: no-repeat
+    }
+}
+
+// ex3
+// &엠퍼센트 ampersand
+// 상위에있는 부모선택자
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    transition: 1s;
+
+    &:hover {
+        background-color: blue;
+    }
+}
+
+// ex-4
+// @at-root
+// 중첩에서 벗어나기
+.one {
+    color: lime;
+
+    .two {
+        color: blue;
+
+        .three {
+            color: red;
+
+            @at-root p {
+                color: steelblue;
+            }
+        }
+    }
+}
+
+// 변수사용하기
+$bgcolor: red;
+$font-h1: 28px;
+$valid-sides: left, center, right;
+$font-sizes: (
+    "myh1" : 45px,
+    "myh2" : 19px,
+    "myp" : 16px
+);
+
+h1 {
+    $spanColor: blue;
+    color: $bgcolor;
+
+    font-size: map-get($font-sizes, 'myp')*2;
+
+    span {
+        color: $spanColor;
+    }
+}
+
+p {
+    text-align: nth($valid-sides, 3);
+}
+
+// mixin 사용하기
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.one {
+    @include flexCenter()
+}
+
+@mixin flexCenterTwo($size: 30px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+    li {
+        margin-right: $size;
+    }
+}
+
+.two {
+    @include flexCenterTwo(30px)
+}
+
+@mixin flexCenterSam($size: 30px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+    li {
+        margin-right: $size;
+    }
+
+    @content
+}
+
+.three {
+    @include flexCenterSam(50px) {
+        color: white;
+    }
+
+    background-color: red;
+}
+
+// extnd
+.profile-user {
+    background-image: url('../../imgs/sprites.png');
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.comment-user {
+    @extend .profile-user;
+    color: tomato;
+}
+
+// %정의만
+%base-button {
+    width: 133px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.follow-button {
+    @extend %base-button;
+    color: red;
+    border: 3px solid blue;
+}
+
+// 조건문 반복문 함수
+@mixin avatar($size, $circle: false) {
+    width: $size;
+    height: $size;
+
+    @if $circle {
+        border-radius: $size /2;
+    }
+
+    @else {
+        border-radius: $size;
+    }
+}
+
+.square-av {
+    @include avatar(100px, $circle: false);
+}
+
+.circle-av {
+    @include avatar(150px, $circle: true);
+}
+
+// Scss - else문
+// Sass 공식문서
+// ture이면 밝은 색을, false면 어두운 색을 스타일함
+$light-background: #f2ece4;
+$light-text: #036;
+$dark-background: #6b717f;
+$dark-text: #d2e1dd;
+
+@mixin theme-colors($light-theme: true) {
+    @if $light-theme {
+        background-color: $light-background;
+        color: $light-text;
+    }
+
+    @else {
+        background-color: $dark-background;
+        color: $dark-text;
+    }
+}
+
+.banner {
+    @include theme-colors($light-theme: true);
+
+    body.dark & {
+        @include theme-colors($light-theme: false);
+    }
+}
+
+// @use "sass:math";
+
+$one: 10px;
+$two: 100px;
+
+@mixin avatar($size, $circle: false) {
+    width: $size;
+    height: $size;
+    background-color: red;
+
+    @if $circle {
+        // border-radius: $size / 2; // step 1
+        // border-radius: ($size / 2) + px; // step 2
+        // border-radius: ($size / 2) + "px"; // 문자열 "00px"로 들어갑니다.
+
+        // 시스템 권고사항
+        // math.div($size, 2) or calc($size / 2)
+        // border-radius: math.div($size, 2);
+    }
+
+    @else {
+        border-radius: 2px;
+    }
+}
+
+.one {
+    @include avatar(10px, true)
+}
+
+.two {
+    @include avatar(10, true)
+}
+
+.three {
+    @include avatar(10px, false)
+}
+
+.four {
+    @include avatar(10px)
+}
+
+.five {
+    @include avatar(10px, 10 > 100)
+}
+
+.six {
+    @include avatar(10px, $one > $two)
+}
+
+// Scss - if, else if, else문
+// Sass 공식문서
+// 조건에 해당하는 방향에 맞춰서 border-bottom 컬러를 스타일함
+@mixin triangle($size, $color, $direction) {
+    height: 0;
+    width: 0;
+
+    border-color: transparent;
+    border-style: solid;
+    border-width: ($size/2);
+
+
+    @if $direction ==up {
+        border-bottom-color: $color;
+    }
+
+    @else if $direction ==right {
+        border-left-color: $color;
+    }
+
+    @else if $direction ==down {
+        border-top-color: $color;
+    }
+
+    @else if $direction ==left {
+        border-right-color: $color;
+    }
+
+    @else {
+        @error "Unknown direction #{$direction}.";
+    }
+}
+
+.next {
+    @include triangle(5px, black, right);
+}
+
+// 반복문
+@for $i from 1 through 5 {
+
+    // #보간
+    .pohoto-box:nth-child(#{$i}) {
+        background-image: url('abc#{$i}.png');
+    }
+}
+
+// @each
+$color: red blue green white black;
+
+@each $c in $color {
+    $i: index($color, $c);
+
+    .color-circle:nth-child(#{$i}) {
+        background: $c;
+    }
+}
+
+// while
+$money :10;
+
+@while $money >1 {
+    $money : $money - 2;
+
+    .content-#{$money} {
+        width: 100px;
+        height: 100px;
+        background: gold;
+    }
+}
+
+@function scale-below($value, $base, $raio: 1.6) {
+    @while $value>$base {
+        $value : ($value/$raio)
+    }
+
+    @return $value;
+}
+
+.sub {
+    font-size: scale-below(20px, 120px, );
+}
+
+// 거듭제곱
+@function pow($base, $expo) {
+    $result : 1;
+
+    @for $i from 1 through $expo {
+        $result : $result * $base
+    }
+
+    @return $result;
+}
+
+.slidebar {
+    margin-left: pow(4, 3)*1px;
+    font-size: max(10, 20, 30)*1px;
+}

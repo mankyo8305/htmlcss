@@ -1,0 +1,262 @@
+nav {
+  background: pink;
+  padding: 10px;
+  height: 50px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+}
+nav ul li {
+  color: white;
+  margin-right: 10px;
+}
+
+.background-img {
+  width: 100%;
+  height: auto;
+  background-image: url("../../imgs/mountain.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  transition: 1s;
+}
+.box:hover {
+  background-color: blue;
+}
+
+.one {
+  color: lime;
+}
+.one .two {
+  color: blue;
+}
+.one .two .three {
+  color: red;
+}
+p {
+  color: steelblue;
+}
+
+h1 {
+  color: red;
+  font-size: 32px;
+}
+h1 span {
+  color: blue;
+}
+
+p {
+  text-align: right;
+}
+
+.one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+.two li {
+  margin-right: 30px;
+}
+
+.three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  color: white;
+  background-color: red;
+}
+.three li {
+  margin-right: 50px;
+}
+
+.profile-user, .comment-user {
+  background-image: url("../../imgs/sprites.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.comment-user {
+  color: tomato;
+}
+
+.follow-button {
+  width: 133px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.follow-button {
+  color: red;
+  border: 3px solid blue;
+}
+
+.square-av {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}
+
+.circle-av {
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+}
+
+.banner {
+  background-color: #f2ece4;
+  color: #036;
+}
+body.dark .banner {
+  background-color: #6b717f;
+  color: #d2e1dd;
+}
+
+.one {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+}
+
+.two {
+  width: 10;
+  height: 10;
+  background-color: red;
+}
+
+.three {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 2px;
+}
+
+.four {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 2px;
+}
+
+.five {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 2px;
+}
+
+.six {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 2px;
+}
+
+.next {
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 2.5px;
+  border-left-color: black;
+}
+
+.pohoto-box:nth-child(1) {
+  background-image: url("abc1.png");
+}
+
+.pohoto-box:nth-child(2) {
+  background-image: url("abc2.png");
+}
+
+.pohoto-box:nth-child(3) {
+  background-image: url("abc3.png");
+}
+
+.pohoto-box:nth-child(4) {
+  background-image: url("abc4.png");
+}
+
+.pohoto-box:nth-child(5) {
+  background-image: url("abc5.png");
+}
+
+.color-circle:nth-child(1) {
+  background: red;
+}
+
+.color-circle:nth-child(2) {
+  background: blue;
+}
+
+.color-circle:nth-child(3) {
+  background: green;
+}
+
+.color-circle:nth-child(4) {
+  background: white;
+}
+
+.color-circle:nth-child(5) {
+  background: black;
+}
+
+.content-8 {
+  width: 100px;
+  height: 100px;
+  background: gold;
+}
+
+.content-6 {
+  width: 100px;
+  height: 100px;
+  background: gold;
+}
+
+.content-4 {
+  width: 100px;
+  height: 100px;
+  background: gold;
+}
+
+.content-2 {
+  width: 100px;
+  height: 100px;
+  background: gold;
+}
+
+.content-0 {
+  width: 100px;
+  height: 100px;
+  background: gold;
+}
+
+.sub {
+  font-size: 20px;
+}
+
+.slidebar {
+  margin-left: 64px;
+  font-size: 30px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/0516_1.js"></script>
+</head>
+
+<body>
+    <h2>버튼을 클릭시 배경색 변경하기</h2>
+    <button id="button">버튼</button>
+
+    <button onclick="console.log(this)">버튼1</button>
+    <button onclick="console.log(this)">버튼2</button>
+    <hr>
+    <button onmouseover="chColor2(this,'blue')" onmouseout="chColor2(this,'red')" id="bt3">버튼3</button>
+    <button onclick="chColor2(this,'blue')">버튼4</button>
+    <div style="border: 1px solid; width:200px; height:200px " id="box"></div>
+    <script>
+
+        var button3 = document.getElementById("bt3")
+
+        // function chColor(obj, color) {
+        //     console.log(color + "가 적용됨")
+        //     obj.style.color = color
+        // }
+        function chColor2(obj, color) {
+            obj.style.backgroundColor = color
+        }
+        // button3.onmouseover = "chColor2(this, 'yellow')"
+        // button3.onmouseout = "chColor2(this, 'pink')"
+
+    </script>
+    <script>
+        var color = ["red", "orange", "cyan", "yellow", "green", "blue"]
+
+        var body = document.getElementsByTagName('body')[0]
+        var body = document.querySelector('body')
+        var box = document.getElementsByTagName('#box')[0]
+        var box = document.querySelector('#box')
+
+        var i = 0;
+        button.onclick = function () {
+            if (i > color.length - 1)
+                i = 0;
+            box.style.backgroundColor = color[i]
+            i++
+
+        }
+
+    </script>
+</body>
+
+</html>

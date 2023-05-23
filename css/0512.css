@@ -1,0 +1,132 @@
+.multi {
+    /* column-count: 6; */
+    padding: 10px;
+    column-width: 1px solid red;
+    -webkit-column-width: 1px solid red;
+    column-rule-color: red;
+    column-gap: 20px;
+    column-rule-style: solid;
+    column-rule-width: 5px;
+    column-rule: 5px dotted blue;
+    column-width: 120px;
+}
+
+.multi:hover p {
+    /* column-span: all; */
+}
+
+.chart {
+    display: flex;
+    justify-content: center;
+}
+
+svg {
+    width: 220px;
+    height: 220px;
+}
+
+svg circle {
+    column-count: 3;
+    column-width: 220px;
+    fill: grey;
+    stroke-width: 10;
+    stroke-dasharray: 630;
+    stroke-linecap: round;
+    stroke: orange;
+    stroke-dashoffset: 50;
+}
+
+@keyframes line1 {
+    from {
+        stroke-dashoffset: 630;
+    }
+
+    to {
+        stroke-dashoffset: 10;
+    }
+}
+
+.chart circle {
+    animation: line1 3s alternate infinite;
+    animation: line1 3s forwards;
+}
+
+@keyframes line2 {
+    from {
+        stroke-dashoffset: 630;
+    }
+
+    to {
+        stroke-dashoffset: 500;
+    }
+}
+
+.chart:nth-child(2) circle {
+    animation: line2 1s alternate infinite;
+    stroke: red;
+}
+
+.chart:nth-child(3) circle {
+    animation: line2 0.5s alternate infinite;
+    stroke: blanchedalmond;
+}
+
+ul {
+    border: 1px solid;
+    display: flex;
+    width: 500px;
+    height: 50px;
+    display: flex;
+
+}
+
+ul li {
+    border: 1px solid;
+    text-align: center;
+    text-transform: uppercase;
+    flex: 1;
+}
+
+ul li a {
+    display: block;
+    width: 100%;
+}
+
+span {
+    width: 100%;
+    height: 100%;
+}
+
+/* 호버시 한글 */
+span:first-child {
+    display: block;
+}
+
+span:last-child {
+    display: none;
+}
+
+a:hover>span:first-child {
+    display: none;
+}
+
+a:hover>span:last-child {
+    display: block;
+}
+
+img {
+    size: inherit;
+    margin: auto;
+}
+
+img:last-child {
+    display: none;
+}
+
+a:hover>img:first-child {
+    display: none;
+}
+
+a:hover>img:last-child {
+    display: block;
+}
