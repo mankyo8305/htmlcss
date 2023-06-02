@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/jq01.js" defer></script>
+    <script>
+
+        $(document).ready(function () {
+            $('h1').css('background', 'pink')
+        })
+        // 익명
+        $(function () {
+            $('ul').css('border', "2px solid")
+        })
+        jQuery(document).ready(function () {
+            $('h1').css('text-align', 'center')
+        })
+        jQuery(function () {
+            $('ul').css('border-radius', "30px")
+        })
+        // var kim = $.noConflict()
+        // kim(document).ready(function () {
+        //     kim('h1').css('color', 'red')
+        // })
+
+        // 메소드 체이닝 기법
+        $(() => {
+            $('#first').css('font-style', 'italic').css('color', 'red').css('background', 'tomato')
+        })
+
+        $('li.menu').css({
+            'font-weight': 'bold',
+            textAlign: "center",
+            border: "2px solid blue",
+            'box-shadow': '3px 3px black ',
+            backgroundColor: 'red'
+        })
+        var color = $('li.menu').css('background-color')
+        console.log(color)
+        $('div#info').html(color)
+        $('input[type="text"]').val("hello")
+    </script>
+</head>
+
+<body>
+    <h1>jQuery 시작</h1>
+    <ul>
+        <li id="first">menu1</li>
+        <li class="menu">menu2</li>
+        <li class="menu">menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+        <li>menu5</li>
+        <li>menu5</li>
+    </ul>
+    <h1>jQuery 시작</h1>
+    <input type="text" name="" id="">
+    <input type="button" name="" id="" value="button">
+    <input type="submit" name="" id="">
+    <input type="reset" name="" id="">
+    <hr>
+    <select name="" id="">
+        <option value="">강아지</option>
+        <option value="">고양이</option>
+        <option value="">쥐</option>
+        <option value="">오랑우탄</option>
+    </select>
+    <div id="info"></div>
+</body>
+
+</html>

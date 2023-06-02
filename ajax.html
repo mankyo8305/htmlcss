@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #target {
+            border: 1px solid;
+            width: 400px;
+            height: 300px;
+            overflow: scroll;
+        }
+
+        #bookInfo {
+            border: 1px solid;
+            width: 400px;
+            height: 300px;
+            overflow: scroll;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> ajax 실습하기</h1>
+    <h2> Asychroonous JavaScript and XML</h2>
+    <div id="target"></div>
+    <button onclick="getData()">getData</button>
+    <button onclick="getBook()">getBook</button>
+    <button onclick="getJson()">getJson</button>
+    <div id="bookInfo"></div>
+    <script>
+        function getData() {
+            var req = new XMLHttpRequest
+            console.log(req)
+            req.onreadystatechange = function () {
+                if (req.readyState == 4 && req.status == 200) {
+                    target.innerHTML = req.responseText
+                }
+            }
+            req.open("GET", 'https://jsonplaceholder.typicode.com/todos', true)
+            req.send()
+        }
+
+        function getBook() {
+            var req = new XMLHttpRequest
+            console.log(req)
+            req.onreadystatechange = function () {
+                if (req.readyState == 4 && req.status == 200) {
+
+                    var DOM = req.responseXML
+                    var bookE = DOM.documentElement
+                    var bookNL = bookE.getElementsByTagName('book')
+
+                    var html = ""
+                    html += "<ol>"
+                    for (var i = 0; i < bookNL.length; i++) {
+                        var bookE = bookNL.item(i)
+                        var bookName = bookE.getElementsByTagName('name').item(0).firstChild.nodeValue
+                        var pubName = bookE.getElementsByTagName('publisher').item(0).firstChild.nodeValue
+                        html += "<li>"
+                        html += bookName + "<br>" + pubName
+                    }
+                }
+                bookInfo.innerHTML = html
+            }
+            req.open("GET", 'books.xml', true)
+            req.send()
+        }
+
+        function getJson() {
+            var req = new XMLHttpRequest()
+            console.log(req)
+            req.onreadystatechange = function () {
+                if (req.readyState == 4 && req.status == 200) {
+                    var data = req.responseText
+                    var json2 = JSON.stringify(data)
+                    var obj = JSON.parse(data)
+                    console.log(obj.books.book)
+                    var book = obj.books.book
+
+                    var out = "<ol>"
+                    book.forEach((ele) => {
+                        out += `<li>${ele.name}`
+                        out += `<ul><li>${ele.publisher}`
+                        out += `<li>${ele.author}`
+                        out += `<li>${ele.price}</ul>`
+                    })
+                    bookInfo.innerHTML = out
+                }
+            }
+            req.open("GET", 'books.json', true)
+            req.send()
+        }
+        // setTimeout(function () {
+        //     document.write(req.responseText)
+        //     console.log(req.responseText)
+        // }, 1000)
+    </script>
+</body>
+
+</html>
