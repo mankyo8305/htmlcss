@@ -6,11 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="js/0612.js" defer></script>
 </head>
 
 <body>
-
+    <h1>문서객체이동</h1>
+    <div id="box">
+        <img src="./imgs/sight.jpg" alt="1">
+        <img src="./imgs/sight2.jpg" alt="2">
+        <img src="./imgs/sight3.jpg" alt="3">
+        <img src="./imgs/sky.jpg" alt="4">
+        <img src="./imgs/sky2.jpg" alt="5">
+    </div>
+    <h1>문서객체복제</h1>
+    <script>
+        $(document).ready(function () {
+            $('img').css('width', '250px').css('height', '200px')
+            // setInterval(() => {
+            //     // $('img').first().appendTo('#box')
+            // })
+            // setInterval(function () { }, 2000)
+            setInterval(move, 2000)
+            function move() {
+                $('img').last().prependTo('#box')
+            }
+            setInterval(() => {
+                $('#box').append($('img').first().clone())
+            }, 5000)
+        })
+    </script>
 </body>
 
 </html>
