@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>tab2.html 만들기</h1>
+    <div class="tab-wrapper">
+        <div class="tab-menu">
+            <ul>
+                <li><a href="#tab-1" class="active">menu1</a></li>
+                <li><a href="#tab-2">menu2</a></li>
+                <li><a href="#tab-3">menu3</a></li>
+            </ul>
+        </div>
+        <div class="tab-contnet">
+            <div id="tab-1">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae perspiciatis consequatur ratione,
+                    aspernatur consectetur doloremque laborum culpa est necessitatibus, unde delectus dicta animi
+                    deleniti.
+                    Earum fuga magnam necessitatibus vitae ratione!
+                </p>
+            </div>
+            <div id="tab-2">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae perspiciatis consequatur ratione,
+                    aspernatur consectetur doloremque laborum culpa est necessitatibus, unde delectus dicta animi
+                    deleniti.
+                    Earum fuga magnam necessitatibus vitae ratione!
+                </p>
+            </div>
+            <div id="tab-3">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae perspiciatis consequatur ratione,
+                    aspernatur consectetur doloremque laborum culpa est necessitatibus, unde delectus dicta animi
+                    deleniti.
+                    Earum fuga magnam necessitatibus vitae ratione!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tagetLink = document.querySelectorAll('.tab-menu a')
+        var tagetLink = document.querySelectorAll('.tab-content>div')
+
+        for (var i = 0; i < targetLink.length; i++) {
+            tagetLink[i].addEventListener('click', function () {
+                var orgTarget = event.taget.getAttribute('href')
+                console.log(orgTarget);
+                var tabTarget = orgTarget.replace('#', '')
+                console.log(tabTarget);
+                for (var j = 0; j < tabContent.length; j++) {
+                    tabContent[j].style.display = 'none'
+                }
+                document.getElementById(tabTarget).style.display = 'block'
+                for (var k = 0; k < targetLink.length; k++) {
+                    targetLink[k].classList.remove('active')
+                }
+                event.target.classList.add('active')
+            })
+        }
+    </script>
+</body>
+
+</html>
